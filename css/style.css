@@ -142,6 +142,13 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 24px;
   font-weight: bold;
   font-family: 'Kaushan Script', cursive;
+  transition: all 0.3s ease;
+}
+
+/* Add hover effect for Shourya in navbar */
+#fh5co-nav .navbar-brand:hover {
+  color: #4A6FE3;
+  transform: scale(1.05);
 }
 
 #fh5co-nav .nav > li > a {
@@ -155,6 +162,13 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-nav .nav > li.active > a {
   color: #4A6FE3;
   background-color: transparent;
+}
+
+/* Fix for active state of navigation buttons */
+#fh5co-nav .nav > li.active > a {
+  color: #4A6FE3;
+  background-color: transparent;
+  font-weight: bold;
 }
 
 /* Transparent navbar when at the top of the page */
