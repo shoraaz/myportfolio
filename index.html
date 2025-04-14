@@ -33,6 +33,53 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<!-- Custom CSS fix for navbar links -->
+	<style>
+		/* Fix for navbar links turning white after click */
+		#fh5co-nav .nav-link:active,
+		#fh5co-nav .nav-link:visited,
+		#fh5co-nav .nav-link:focus {
+			color: rgba(255, 255, 255, 0.8) !important; /* Match the default color */
+		}
+		
+		/* Enhanced hover effect for navbar links */
+		#fh5co-nav .nav > li > a:hover {
+			color: #4A6FE3 !important; /* Blue color on hover */
+			background-color: transparent;
+			transform: translateY(-2px);
+			transition: all 0.3s ease;
+		}
+		
+		/* Add a subtle underline effect on hover */
+		#fh5co-nav .nav > li > a {
+			position: relative;
+			transition: all 0.3s ease;
+		}
+		
+		#fh5co-nav .nav > li > a:after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			bottom: 0;
+			left: 50%;
+			background-color: #4A6FE3;
+			transition: all 0.3s ease;
+			transform: translateX(-50%);
+		}
+		
+		#fh5co-nav .nav > li > a:hover:after {
+			width: 70%;
+		}
+		
+		/* Additional fix for mobile navbar */
+		@media (max-width: 767px) {
+			.navbar-collapse {
+				background-color: rgba(0, 0, 0, 0.9); /* Ensure mobile menu has proper background */
+			}
+		}
+	</style>
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- Typed.js for animated typing -->
@@ -74,7 +121,7 @@
 			</div>
 		</div>
 	</nav>
-	<!-- End Navigation Bar -->	
+	<!-- End Navigation Bar -->
 	
 	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -283,7 +330,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row" style="margin-top: 30px;">
+				<div class="row" style="margin-top: 30px;">
 				<div class="col-md-4 col-sm-6">
 					<div class="project animate-box" data-animate-effect="zoomIn">
 						<div class="project-text">
